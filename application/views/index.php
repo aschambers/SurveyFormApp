@@ -29,6 +29,7 @@
 	<div id='container'>
 		<!-- client side version of echo -->
 		<!-- <?= $this->session->userdata['number']; ?> -->
+		<!-- test -->
 		<h1>Welcome to the Game</h1>
 		<p>I am thinking of a number between 1 and 100</p>
 		<p>Take a guess</p>
