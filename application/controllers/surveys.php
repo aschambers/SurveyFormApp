@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Surveys extends CI_Controller {
 
 	// automatically loaded if no method is specified
 	public function index()
@@ -11,6 +11,11 @@ class Main extends CI_Controller {
 			$this->session->set_userdata('number', rand(1,100));
 		}
 		$this->load->view('index');
+	}
+
+	public function process()
+	{
+		redirect('/result');
 	}
 
 	// check the value of number in session, and check your guess

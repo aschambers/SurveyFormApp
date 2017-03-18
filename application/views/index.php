@@ -1,8 +1,8 @@
 <html>
 <head>
-	<title>Great Number Game</title>
+	<title>Survey Form</title>
 	<style type="text/css">
-		body {
+		/*body {
 			text-align:center;
 		}
 		.red {
@@ -21,47 +21,38 @@
 		}
 		.playagain {
 			margin-top:10px;
-		}
+		}*/
 	</style>
 </head>
 <body>
-
 	<div id='container'>
-		<!-- client side version of echo -->
-		<!-- <?= $this->session->userdata['number']; ?> -->
-		<h1>Welcome to the Game</h1>
-		<p>I am thinking of a number between 1 and 100</p>
-		<p>Take a guess</p>
-<center>
-<?php 
-		if($this->session->flashdata('result'))
-		{
-?>
-			<p class='red'><?= $this->session->flashdata('result'); ?></p>
-<?php
-		}
-		if($this->session->flashdata('correct'))
-		{
-?>
-			<div class='green'>
-				<p><?= $this->session->flashdata('correct'); ?> was the number!</p>
-				<form class="playagain" action='reset' method='post'>
-					<input type='submit' value='Play Again?'>
-				</form>
-			</div>
-<?php
-		}
-?>
-</center>
-		<!-- action = check is the route name in our routes.php file  -->
-		<form action='check' method='post'>
-			<input type='text' name='guess' />
-			<input type='submit' value='Submit' />
+		<form action='process' method='post'>
+			<label>Your Name:</label>
+			<input name='name'/><br />
+			<label>Dojo Location</label>
+			<select name='location'>
+				<option>Mountain View</option>
+				<option>Seattle</option>
+				<option>San Jose</option>
+			</select><br />
+			<label>Favorite Language</label>
+			<select name='language'>
+				<option>JavaScript</option>
+				<option>PHP</option>
+				<option>Python</option>
+			</select><br />
+			<label name='comment'>Comment (Optional):</label><br />
+			<textarea></textarea><br />
+			<input type='submit' value='submit' />
 		</form>
 	</div>
-
 </body>
 </html>
+
+
+
+
+
 
 
 
